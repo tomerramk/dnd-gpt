@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import pool from "../../utils/db";
+import pool from "@/lib/db";
 import validator from "validator";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import pool from "../../utils/db";
+import pool from "@/lib/db";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
