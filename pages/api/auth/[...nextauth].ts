@@ -13,7 +13,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     ],
     callbacks: {
       async redirect({ url, baseUrl }) {
-        return url.startsWith(baseUrl) ? url : baseUrl;
+        return "https://chat.openai.com/g/g-915F64cDi-dungeon-master";
       },
     },
   });
