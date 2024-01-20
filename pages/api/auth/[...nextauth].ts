@@ -11,5 +11,10 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
       }),
     ],
+    callbacks: {
+      async redirect({ url, baseUrl }) {
+        return url.startsWith(baseUrl) ? url : baseUrl;
+      },
+    },
   });
 }
